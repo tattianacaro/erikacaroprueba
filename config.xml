@@ -7,14 +7,19 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Mi primer APP</name>
+    <name>SiTP móvil</name>
 
     <description>
-        Rutas y puntos de recargar SITP 
+        Rutas y puntos de recargar- SiTP 
     </description>
 
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Tattiana caro 
     </author>
-
+    
+  <icon src="iconos/icono36.png" gap:plataform="android" gap.density="ldpi" />
+  <icon src="iconos/icono48.png" gap:plataform="android" gap.density="mdpi" />
+  <icon src="iconos/icono72.png" gap:plataform="android" gap.density="hdpi" />
+  <icon src="iconos/icono128.png" gap:plataform="android" gap.density="xhdpi" />
+  
 </widget>

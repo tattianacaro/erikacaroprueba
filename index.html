@@ -7,14 +7,39 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<style type="text/css">
+#encabezado {
+	background: none;
+	background-image: url(img/rfondo.png);
+	background-repeat: repeat-x;
+	border: none;
+}
+#r1 {
+	text-align: left;
+	width: 22px;
+}
+#rcentro {
+	text-align: center;
+}
+#r2 {
+	text-align: right;
+	width: 22px;
+}
+</style>
 </head>
 
 <body>
 
 
-<div data-role="page" id="inicio">
-  <div data-role="header" data-position="fixed">
-    <h1> SiTP</h1>
+<div data-role="page" id="iniciorutas">
+   <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><img src="img/r1.png" width="80" height="112"></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
   <div data-role="content">
     <p> Ud está ubicado en ...</p>
@@ -39,12 +64,12 @@
           <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
@@ -55,10 +80,16 @@
 </div>
 
 
-<div data-role="page" id="confirmacion" data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
+<div data-role="page" id="confirmacion">
   
-    <h1><a href="#inicio">SiTP</a></h1>
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciorutas"><img src="img/r1flecha.png" width="80" height="112"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
   
   <div data-role="content">
@@ -66,19 +97,19 @@
     
    
     </p>
-    <p><a href="#elijadestino" data-role="button">Ver Rutas Sugeridas</a></p>
-    <p>&nbsp;<a href="#" data-role="button">Búsqueda Manual</a></p>
+    <p><a href="#elijadestino" data-role="button" data-icon="arrow-r" data-iconpos="right">Ver Rutas Sugeridas</a></p>
+    <p>&nbsp;<a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Búsqueda Manual</a></p>
   </div>
   <div data-role="footer" data-position="fixed">
         <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
@@ -89,9 +120,15 @@
   </div>
 </div>
 
-<div data-role="page" id="iniciobusqueda" data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
-    <h1><a href="#inicio">SiTP</a></h1>
+<div data-role="page" id="iniciobusqueda">
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciorutas"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
   <div data-role="content">
     <ol data-role="listview">
@@ -99,27 +136,27 @@
       <li><a href="#manualtintal">Tintal- Zona Franca</a></li>
       <li><a href="#manualbosa">Bosa</a></li>
       <li><a href="#manualengativa">Engativá</a></li>
-      <li><a href="#">Fontibón</a></li>
-      <li><a href="#">Usaquén</a></li>
-      <li><a href="#">Ciudad Bolívar</a></li>
-      <li><a href="#">Usme</a></li>
-      <li><a href="#">Perdomo</a></li>
-      <li><a href="#">Kenedy</a></li>
-      <li><a href="#">Suba Oriental</a></li>
-      <li><a href="#">San Cristobal</a></li>
-      <li><a href="#">Suba Centro</a></li>
+      <li><a href="#manualfontibon">Fontibón</a></li>
+      <li><a href="#manualusaquen">Usaquén</a></li>
+      <li><a href="#manualbolivar">Ciudad Bolívar</a></li>
+      <li><a href="#manualusme">Usme</a></li>
+      <li><a href="#manualperdomo">Perdomo</a></li>
+      <li><a href="#manualkenedy">Kenedy</a></li>
+      <li><a href="#manualsubaoriental">Suba Oriental</a></li>
+      <li><a href="#manualsancristobal">San Cristobal</a></li>
+      <li><a href="#manualsubacentro">Suba Centro</a></li>
     </ol>
   </div>
   <div data-role="footer" data-position="fixed">
    <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
@@ -129,10 +166,18 @@
 </div>
 
 
-<div data-role="page" id="elijadestino"  data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
-    <h1><a href="#inicio">SiTP</a></h1>
+<div data-role="page" id="elijadestino">
+  
+    <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#confirmacion"><img src="img/r1flecha.png" width="80" height="112"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
+  
   <div data-role="content">
     <p>ELIJA SU DESTINO</p>
     <p>&nbsp;</p>
@@ -158,12 +203,12 @@
     <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
@@ -173,45 +218,63 @@
 </div>
 
 
-<div data-role="page" id="manual80" data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
-    <h1><a href="#inicio">SiTP</a></h1>
+<div data-role="page" id="manual80">
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
-  <div data-role="content">RUTAS DESDE CALLE 80</div>
+  <div data-role="content">
+    <p>RUTAS DESDE CALLE 80
+    </p>
+    <p><a href="#mapac41"><img src="img/C41.jpg" width="200" height="364" alt="C41"></a><a href="#mapa112"><img src="img/112.jpg" width="300" height="138" alt=""></a><a href="#mapa201"><img src="img/201.jpg" width="300" height="125" alt="201"></a><a href="#mapa385"><img src="img/385.jpg" width="300" height="63" alt="385"></a><a href="#mapa579"><img src="img/579.jpg" width="300" height="91" alt="579"></a><a href="#mapa621"><img src="img/621.jpg" width="300" height="72" alt="621"></a></p>
+  </div>
   <div data-role="footer" data-position="fixed">
    <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
             </ul>
-        </div>
+    </div>
   </div>
 </div>
 
 
-<div data-role="page" id="manualtintal" data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
-    <h1><a href="#inicio">SiTP</a></h1>
+<div data-role="page" id="manualtintal">
+
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
+  
   <div data-role="content">RUTAS DE TINTAL-ZONA FRANCA</div>
   <div data-role="footer" data-position="fixed">
     <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
@@ -221,21 +284,32 @@
 </div>
 
 
-<div data-role="page" id="manualbosa" data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
-    <h1><a href="#inicio">SiTP</a></h1>
+<div data-role="page" id="manualbosa">
+  
+   <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
-  <div data-role="content">RUTAS DESDE BOSA</div>
+  
+  <div data-role="content">
+    <p>RUTAS DESDE BOSA</p>
+    <p><a href="#mapa91"><img src="img/91.jpg" width="300" height="117" alt="91"></a><a href="#mapa99"><img src="img/99.png" width="300" height="116" alt="99"></a><a href="#mapa135"><img src="img/135.png" width="300" height="121" alt="135"></a><a href="#mapa496"><img src="img/496.png" width="200" height="359" alt="496"></a><a href="#mapa579bosa"><img src="img/579.jpg" width="300" height="91" alt="579"></a><a href="#mapa781"><img src="img/781.png" width="300" height="116" alt="781"></a><a href="#mapac11"><img src="img/C11.png" width="300" height="126" alt="C11"></a><a href="#mapac15"><img src="img/C15.png" width="300" height="142" alt="C15"></a></p>
+  </div>
   <div data-role="footer" data-position="fixed">
     <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
@@ -245,26 +319,1370 @@
 </div>
 
 
-<div data-role="page" id="manualengativa" data-add-back-btn="true" data-back-btn-text="Volver">
-  <div data-role="header" data-position="fixed">
-    <h1><a href="#inicio">SiTP</a></h1>
+<div data-role="page" id="manualengativa">
+  
+   <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
   </div>
-  <div data-role="content">RUTAS DESDE ENGATIVÁ</div>
+  
+  <div data-role="content">
+    <p>RUTAS DESDE ENGATIVÁ</p>
+    <p><img src="img/12.png" width="300" height="58" alt="12"><img src="img/128.png" width="300" height="57" alt="128"><img src="img/135.png" width="300" height="121" alt="135"><img src="img/228.png" width="300" height="117" alt="228"><img src="img/P500.png" width="300" height="56" alt="P500"><img src="img/SE10.png" width="300" height="56" alt="SE10"></p>
+  </div>
   <div data-role="footer" data-position="fixed">
     <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="check">
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
                         RUTAS
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-transition="fade" data-icon="search">
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
                         TULLAVE
                     </a>
                 </li>
             </ul>
         </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="manualfontibon">
+
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+
+  <div data-role="content">
+    <p>RUTAS DESDE FONTIBÓN</p>
+    <p><img src="img/136.png" width="300" height="144" alt="136"><img src="img/505.png" width="200" height="332" alt="505"><img src="img/C4.png" width="300" height="116" alt="C4"></p>
+  </div>
+  	  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="manualusaquen">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>RUTAS DESDE USAQUEN</p>
+    <p><img src="img/4.png" width="300" height="60" alt="4"><img src="img/291.png" width="300" height="119" alt="291"><img src="img/544B.png" width="300" height="136" alt="544B"></p>
+  </div>
+ 
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="manualbolivar">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>RUTAS DESDE CIUDAD BOLIVAR</p>
+    <p><img src="img/C7.png" width="300" height="152" alt="C7"><img src="img/C13.png" width="200" height="296" alt="C13"><img src="img/796A.png" width="300" height="53" alt="796A"><img src="img/900.png" width="300" height="58" alt="900"></p>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="manualusme">
+
+   <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+ 
+  <div data-role="content">
+    <p>RUTAS DESDE USME</p>
+    <p><img src="img/201.jpg" width="300" height="125" alt="201"><img src="img/319.png" width="300" height="54" alt="319"><img src="img/652.png" width="300" height="134" alt="652"><img src="img/330.png" width="300" height="112" alt="330"></p>
+  </div>
+
+	  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="manualperdomo">
+  
+    <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>RUTAS DESDE PERDOMO</p>
+    <p><img src="img/703.png" width="300" height="137" alt="703"></p>
+  </div>
+  
+ <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="manualkenedy">
+  
+      <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+
+
+  <div data-role="content">
+    <p>RUTAS DESDE KENNEDY</p>
+    <p><img src="img/13.png" width="300" height="61" alt="13"><img src="img/14.png" width="300" height="130" alt="14"><img src="img/15.png" width="300" height="55" alt="15"><img src="img/112.jpg" width="300" height="138" alt="112"><img src="img/738.png" width="300" height="53" alt="738"></p>
+  </div>
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="manualsubaoriental">
+  
+        <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+
+  <div data-role="content">RUTAS DESDE SUBA ORIENTAL</div>
+ 
+ 	  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="manualsancristobal">
+  
+        <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>RUTAS DESDE SAN CRISTOBAL</p>
+    <p><img src="img/114A.png" width="300" height="51" alt="114a"><img src="img/228.png" width="300" height="117" alt="228"><img src="img/256.png" width="300" height="54" alt="256"><img src="img/738.png" width="300" height="53" alt="738"></p>
+  </div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="manualsubacentro">
+  
+        <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">RUTAS DESDE SUBA CENTRO</div>
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="iniciotullave">
+  
+          <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciobusqueda"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">INICIO TU LLAVE</div>
+ 
+ <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+          <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#confirmartullave" data-transition="fade" data-theme="b" data-icon="check">
+                        Confirmar
+                    </a>
+                </li>
+                <li>
+                    <a href="#tullavebusqmanual" data-transition="fade" data-theme="e" data-icon="search">
+                        Busq. manual
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+ <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="confirmartullave">
+
+        <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciotullave"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">PUNTOS CERCANOS </div>
+ 
+  <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+        
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavebusqmanual">
+ 
+     <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#iniciotullave"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+ 
+  <div data-role="content">ELEGIR UBICACIÓN</div>
+  
+   <ol data-role="listview">
+      <li><a href="#tullave80">Calle 80</a></li>
+      <li><a href="#tullavetintal">Tintal- Zona Franca</a></li>
+      <li><a href="#tullavebosa">Bosa</a></li>
+      <li><a href="#tullaveengativa">Engativá</a></li>
+      <li><a href="#tullavefontibon">Fontibón</a></li>
+      <li><a href="#tullaveusaquen">Usaquén</a></li>
+      <li><a href="#tullaveciudadbolivar">Ciudad Bolívar</a></li>
+      <li><a href="#tullaveusme">Usme</a></li>
+      <li><a href="#tullaveperdomo">Perdomo</a></li>
+      <li><a href="#tullavekenedy">Kennedy</a></li>
+      <li><a href="#tullavesubaoriental">Suba Oriental</a></li>
+      <li><a href="#tullavesancristobal">San Cristobal</a></li>
+      <li><a href="#tullavesubacentro">Suba Centro</a></li>
+    </ol>
+    
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+  
+</div>
+
+<div data-role="page" id="tullave80">
+
+     <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE CALLE 80</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavetintal">
+   
+   <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE TINTAL- ZONA FRANCA</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavebosa">
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE BOSA</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullaveengativa">
+ 
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE ENGATIVÁ</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavefontibon">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE FONTIBÓN</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullaveusaquen">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE USAQUÉN</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullaveciudadbolivar">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE CIUDAD BOLIVAR</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullaveusme">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE USME</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullaveperdomo">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE PERDOMO</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavekenedy">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE KENNEDY</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavesubaoriental">
+   
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE SUBA ORIENTAL</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavesancristobal">
+  
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE SAN CRISTOBAL</div>
+  
+   <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<div data-role="page" id="tullavesubacentro">
+   
+ <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#tullavebusqmanual"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">TU LLAVE SUBA CENTRO</div>
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapac41">
+  
+   <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>QUIRIGUA- TEUSAQUILLO</p>
+    <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+     <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa112">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>CORTIJO- PORVENIR</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa201">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>LISBOA- LA FISCALA</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa385">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>CORTIJO- GERMANIA</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+      </ul>
+    </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa579">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>EL RECREO- CENTRO INTERNACIONAL</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa621">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>SIMÓN BOLIVAR- RICAURTE</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa579">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manual80"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>EL RECREO- CENTRO INTERNACIONAL</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa91">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manualbosa"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>BOSA SAN JOSÉ- PORCIÚNCULA</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mapa99">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manualbosa"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>BOSA LA PRIMAVERA- GERMANIA</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="mapa135">
+  
+  <div id="encabezado" data-position="fixed" data-role="header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="r1"><a href="#manualbosa"><img src="img/r1flecha.png" width="80" height="112" border="0"></a></td>
+    <td id="rcentro"><img src="img/rcentro.png" width="106" height="112"></td>
+    <td id="r2"><img src="img/r2.png" width="79" height="112"></td>
+  </tr>
+</table>
+  </div>
+  
+  <div data-role="content">
+    <p>JAQUELINE- BOSQUE POPULAR</p>
+     <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
+        width="288" height="200"></p>
+    <p>&nbsp;</p>
+    
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#paraderosc41" data-transition="fade" data-theme="b" data-icon="check">
+                        Paraderos
+                  </a>
+                </li>
+             </ul>
+        </div>
+  </div>
+  
+    <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#iniciorutas" data-transition="fade" data-icon="check">
+                        RUTAS
+                    </a>
+                </li>
+                <li>
+                    <a href="#iniciotullave" data-transition="fade" data-icon="search">
+                        TULLAVE
+                    </a>
+                </li>
+            </ul>
+    </div>
   </div>
 </div>
 
