@@ -9,7 +9,7 @@
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 <style type="text/css">
 #encabezado {
-	background: none;
+    background: none;
 	background-image: url(img/rfondo.png);
 	background-repeat: repeat-x;
 	border: none;
@@ -26,6 +26,73 @@
 	width: 22px;
 }
 </style>
+
+<!-- Copiar a partir de acá -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="js/jquery.ui.map.full.min.js"></script>
+<script src="js/jquery.ui.map.extensions.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#iniciotullave').on("pageshow", function() {
+			$('#iniciotullave #map_canvas').gmap('refresh');
+	});
+	$('#map_canvas').gmap().bind('init', function(evt, map) {
+		$('#map_canvas').gmap('getCurrentPosition', function(position, status) {
+			if ( status === 'OK' ) {
+				var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				$('#map_canvas').gmap('addMarker', {'position': clientPosition, 'bounds': true});
+				$('#map_canvas').gmap('addShape', 'Circle', { 
+					'strokeWeight': 0, 
+					'fillColor': "#008595", 
+					'fillOpacity': 0.25, 
+					'center': clientPosition, 
+					'radius': 15, 
+					'clickable': false 
+				});
+			}
+		});   
+	});
+	$('#map_canvas').gmap({'callback': function() {
+		var self = this;
+		self.getCurrentPosition(function(position, status) {
+			if ( status === 'OK' ) {
+				var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				self.addMarker({'position': clientPosition, 'bounds': true});
+				self.addShape('Circle', { 
+					'strokeWeight': 0, 
+					'fillColor': "#008595", 
+					'fillOpacity': 0.25, 
+					'center': clientPosition, 
+					'radius': 15, 
+					'clickable': false 
+				});
+			}
+		});   
+	}});
+	$('#map_canvas').gmap('getCurrentPosition', function(position, status) {
+		if ( status === 'OK' ) {
+			var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			$('#map_canvas').gmap('addMarker', {'position': clientPosition, 'bounds': true});
+			$('#map_canvas').gmap('addShape', 'Circle', { 
+				'strokeWeight': 0, 
+				'fillColor': "#008595", 
+				'fillOpacity': 0.25, 
+				'center': clientPosition, 
+				'radius': 15, 
+				'clickable': false 
+			});
+		}
+	});
+});
+</script>
+<style type="text/css">
+#map_canvas {
+	width: 300px;
+	height: 300px;
+}
+</style>
+<!-- Copiar hasta acá -->
+
 </head>
 
 <body>
@@ -43,9 +110,8 @@
   </div>
   <div data-role="content">
     <p> Ud está ubicado en ...</p>
-    <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
-        width="288" height="200"></p>
-          <div data-role="navbar" data-iconpos="left">
+    <div id="map_canvas"></div>
+                <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
                     <a href="#confirmacion" data-transition="fade" data-theme="b" data-icon="check">
@@ -680,8 +746,9 @@
   
   <div data-role="content">INICIO TU LLAVE</div>
  
- <p> <img src="https://maps.googleapis.com/maps/api/staticmap?center=Bogota, CO&amp;zoom=14&amp;size=288x200&amp;markers=Bogota, CO&amp;sensor=false"
-        width="288" height="200"></p>
+	 <div id="map_canvas"></div>
+      
+     
           <div data-role="navbar" data-iconpos="left">
             <ul>
                 <li>
